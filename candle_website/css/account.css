@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+/*google fonts*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+h3 {line-height: 1.1;}
+
+/*ends base*/
+
+input, button {
+  outline: none;
+  border: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fef4ad;
+}
+
+/* ends basic */
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image:url("../img/account.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  position: relative;
+}
+
+.form__box {
+  width: 600px;
+  max-width: 85%;
+  height: auto;
+  margin: 0 auto;
+  padding: 5% 2%;
+  border-radius: 12px;
+  background-color: #212121;
+  color: #f8f8f8;
+  box-shadow: 0 0 15px #2f2f2f78, 0 0 35px #19191982;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -54%);
+}
+
+
+@media screen and (max-width: 375px) {
+  .main {
+    height: 120vh;
+  }
+ 
+  .form__box {
+     top: 54%;
+     padding: 2% 1%;
+  }
+
+ 
+}
+
+
+.form__box .top {
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.form__box .top h3 {
+  font-size: 2em;
+  letter-spacing: 1.5px;
+  color: white;
+}
+
+.form__box .top .social_login {
+  margin: 10px 0;
+}
+
+.form__box .top .social_login button {
+  background: transparent;
+  border: 0.5px solid #f8f8f8;
+  border-radius: 70px;
+  width: 55px;
+  height: 55px;
+  margin: 10px 10px;
+  cursor: pointer;
+  transition: .3s border;
+}
+
+.form__box .top .social_login button:hover {
+  border: 2px solid #fef4ad;
+}
+
+.form__box .top .social_login button i {
+  font-size: 1.1em;
+  color: #f8f8f8;
+  transition: .3s color;
+  vertical-align: middle;
+}
+
+.form__box .top .social_login button:hover i {
+  color: #fef4ad;
+}
+
+.form__box form {
+  width: 75%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.form__box form .details_input {
+  margin-bottom: 20px;
+}
+
+.form__box form .details_input input {
+  display: block;
+  width: 100%;
+  background: transparent;
+  color: #f8f8f8;
+  letter-spacing: .8px;
+  border: 2px solid #333333;
+  border-radius: 10px;
+  padding: 12px 10px;
+  transition: .3s border;
+}
+
+.form__box form .details_input input:focus {
+  border: 2px solid #fef4ad;
+}
+
+.form__box form .details_input input:nth-child(2) {
+  margin: 15px auto;
+}
+
+.form__box form .checkbox span {
+  margin-left: 10px;
+  font-size: .9em;
+  color: #ccc;
+}
+
+.form__box form .checkbox span a {
+  text-decoration: underline;
+}
+
+.form__box form .action {
+  margin-top: 30px;
+}
+
+.form__box form .action input {
+  background: #fef4ad;
+  color: #f8f8f8;
+  font-weight: 600;
+  padding: 12px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition-duration: .3s;
+  transition-property: background, color, border;
+}
+
+.form__box form .action input:first-child {
+  padding: 13px 41px;
+  margin: 0px 15px 15px 0px;
+  color: black;
+}
+
+.form__box form .action input:first-child:hover {
+  background: #41925e;
+}
+
+.form__box form .action input:last-child {
+  background: transparent;
+  color: #fef4ad;
+  border: 2px solid #fef4ad;
+}
+
+.form__box form .action input:last-child:hover {
+  color: #f8f8f8;
+  border: 2px solid #f8f8f8;
+  background: #444;
+}
+
+
+/*stop here */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #673C63;
+    color: white;
+    border-bottom: 2px solid black;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    font-family: 'Lobster';
+    letter-spacing: 2px;
+}
+
+.brand-title a{
+    text-decoration: none;
+    color: white;
+}
+
+.brand-title a:hover {
+    color:#fef4ad;
+}
+
+.brand-title:hover {
+    color:#fef4ad;
+    cursor: pointer;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: rgb(128, 127, 127);
+    color:#fef4ad;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.toggle-button .bar:hover {
+    color: #fef4ad;
+}
+
+
+
+#footer {
+    position:fixed;
+    left:0px;
+    bottom:48px;
+    height:10px;
+    width:100%;
+ }
+
+ footer {
+    background: #673C63;
+    animation: change-background 3s infinite linear;
+    color: white;
+ }
+
+ .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+ }
+
+ .footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 2.5rem;
+    font-family: 'Lobster';
+    letter-spacing: 2px;
+    cursor: pointer;
+ }
+
+ .footer-content h3:hover {
+    color:#fef4ad;
+ }
+
+ .footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 10px;
+    font-size: 15px;
+ }
+
+ 
+
+ .footer-bottom {
+    background: #673C63;
+    border-top: 2px solid black;
+    width: 100vw;
+    padding: 30px 0;
+    
+    text-align: center;
+    bottom: 0;
+ }
+
+ .footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+ }
+
+ .footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+ }
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+@media (max-width: 600px) {
+	.container {
+		padding-top: 5px;
+	}
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .hero {
+
+        margin: center;
+      width: 50%;
+      padding: 10px;
+      text-align: center;
+     }
+}
+
+
+
